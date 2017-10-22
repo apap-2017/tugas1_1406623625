@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#table').DataTable();
+	});
+</script>
+</head>
+
+<body>
+	<div th:replace="fragments/fragment :: header"></div>
+
+	<h1>Mencari Penduduk</h1>
+	<br></br>
+	<form action="/penduduk" method="get">
+		<div>
+			<label for="nik">Masukan NIK</label> <input type="text" name="nik" />
+		</div>
+		<div>
+			<button type="submit">Cari Penduduk</button>
+		</div>
+	</form>
+	<br></br>
+	<br></br>
+	<h1>Mencari Keluarga</h1>
+	<br></br>
+	<form action="/keluarga" method="get">
+		<div>
+			<label for="nik">Masukan NKK</label> <input type="text" name="nkk" />
+		</div>
+		<div>
+			<button type="submit">Cari Keluarga</button>
+		</div>
+	</form>
+
+</body>
+
+</html>
